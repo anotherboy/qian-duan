@@ -1,0 +1,40 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <!--定义风格/各类风格-->
+    <style type="text/css">     
+        .style1{                     /* css这样注释 */
+        font-size: 20px;
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+        } 
+        a:link img {             /* 所有a中含有超链接，碰到img则显示灰色图片*/
+            filter: grayscale();        /*滤镜*/
+        }
+        a:hover img{             /*hover:鼠标悬停时,图片恢复原色*/
+            filter: opacity();
+        }
+    </style>
+</head>
+
+
+<body>
+    <span class="style1">栏目一</span><br/> <!--选择某一个类-->
+    <span class="style1">栏目二</span><br/> 
+    <span class="style1">栏目三</span><br/>
+    <span class="style1">栏目四</span><br/>
+    <span class="style1">栏目五</span><br/>
+    <a href="#"><img src="C:\Users\hjh\Desktop\HTML/images/dog1.jpg" height="200px" /></a>
+    <a href="#"><img src="C:\Users\hjh\Desktop\HTML/images/dog2.jpg" width="200px" /></a>
+    <a href="#"><img src="C:\Users\hjh\Desktop\HTML/images/dog3.jpg" height="200px" /></a>
+</body>
+</html>

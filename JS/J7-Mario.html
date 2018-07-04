@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="J7-Mario.css" />
+    <script lang="javascript">
+        //Mario游戏
+        function Mario(){
+            this.x=0;
+            this.y=0;
+            this.move=function(direct){
+                switch(direct){
+                    case "s":{
+                        var mymario=document.getElementById("mymario");    //取得一个html中的对象，以得到其相应值
+                        var top=mymario.style.top;
+                        new_top = parseInt(top.substr(0,top.length-2));      //substr(star,length)提取字符串中的一段 //字符串转换为int型
+                         mymario.style.top = (new_top-50)+"px";break;                 //移动  
+                    }
+                    case "y":{
+                        var mymario=document.getElementById("mymario");    //取得一个html对象，以得到其相应值
+                        var left=mymario.style.left;
+                        new_left = parseInt(left.substr(0,left.length-2));      //substr(star,length)提取字符串中的一段 //字符串转换为int型
+                        mymario.style.left = (new_left+50)+"px";break;                 //移动  
+                    }
+                    case "x":{
+                        var mymario=document.getElementById("mymario");    //取得一个html对象，以得到其相应值
+                        var top=mymario.style.top;
+                        new_top = parseInt(top.substr(0,top.length-2));      //substr(star,length)提取字符串中的一段 //字符串转换为int型
+                        mymario.style.top = (new_top+30)+"px";break;                 //移动  
+                    }
+                    case "z":{
+                        var mymario=document.getElementById("mymario");    //取得一个html对象，以得到其相应值
+                        var left=mymario.style.left;
+                        new_left = parseInt(left.substr(0,left.length-2));      //substr(star,length)提取字符串中的一段 //字符串转换为int型
+                        mymario.style.left = (new_left-50)+"px";break;                 //移动  
+                    }
+                
+                    }
+                    }
+                }
+            
+        //Mario类的实例
+        var mario = new Mario();
+        function mario_move(direct){   //全局函数
+            switch(direct){
+                case "s": mario.move(direct);break;
+                case "y": mario.move(direct);break;
+                case "x": mario.move(direct);break;
+                case "z": mario.move(direct);break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="gamediv">
+        <img id="mymario"  style="width: 60px;left: 300px;top:0px;position: absolute" src="C:\Users\hjh\Desktop\HTML\images\mario.jpg" />
+    </div>
+    <table class="controlcenter" >
+    <tr><td colspan="3">游戏键盘</td></tr>
+    <tr><td></td><td align=center><input type="button" value="👆" onclick="mario_move('s')" /></td><td></td></tr>
+    <tr><td><input type="button" value="👈" onclick="mario_move('z')" /></td><td></td><td><input type="button" value="👉" onclick="mario_move('y')" /></td></tr>  <!--onclick:点击时发生且传值-->
+    <tr><td></td><td><input type="button" value="👇" onclick="mario_move('x')" /></td><td></td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--js 代码一般行head标签之间-->
+    <script lang="javascript">
+        var num1=450;
+        var num2=89;                   //js中变量用var表示
+        var result=num1+num2;
+        window.alert("结果是"+result);  //window:自带的类  alert:显示一个带有信息的警示框
+        window.alert(typeof num1)
+        var a="abc";
+        window.alert(parseInt(a));      //解析是否为整数 强制转换类型
+        window.alert(6/0);              //无穷大
+        window.alert(isNaN(123));       //是不是不是一个数
+
+        var b="avc";
+        var c="av\"df";                 //转义
+        window.alert(c);
+
+        var n1=90;
+        var n2=8;
+        if(a%b==0){
+            window.alert("能整除");
+        }
+        else{
+            window.alert("不能整除");
+        }
+
+        var val=window.prompt("请输入：");         //输入
+        document.writeln("你刚输入了：" + val)     //浏览器载入html后都是document对象,write:在这个对象中写
+
+        var n3=window.prompt("input a num:");
+        var n4=window.prompt("input a num:");
+        n3=parseFloat(n3);
+        n4=parseFloat(n4);
+        if(n3>n4){
+            window.alert("n3>n4");
+        }
+        else if(n3<n4)
+            window.alert("n3<n4");
+        else
+            window.alert("n3=n4")
+
+        //逻辑运算符
+        var a=0;
+        var b="";
+        var d=false;
+        var c=a||b||d;            //逻辑运算符返回第一个不为false得值或者返回最后一个值
+        window.alert(c);    
+        //移位运算符
+        var a=4>>2;                 //4:00000100  向左移动两位 00000001
+        window.alert(a);      
+        var b=-4>>2;
+        window.alert(b);            //-4: 原码：10000100  反码：11111011  补码：11111100 右移两位：11111111 原码：10000001（-1）
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

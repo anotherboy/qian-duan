@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script lang="javascript">
+        //封装
+        function Person(name, agei,sal){
+            this.name=name;                     //公开属性
+            var age=agei;                       //私有属性
+            var salary=sal;
+                        //定义公开方法 
+            this.show1=function(){               
+                window.alert(age+"---"+sal);
+            }
+                       //定义私有方法
+            function show2(){
+                window.alert(age+"---"+sal);
+            }
+        }
+        var p1=new Person("sp",20,5000);
+        window.alert(p1.name);
+        p1.show1();                              //利用公开方法访问私有属性
+        //p1.show2();                              //p1对象不能访问私有方法
+        //继承
+        /*function Mid(name,age){
+            this.name=name;
+            this.age=age;
+           this.show= window.alert(name +"--"+age);
+            this.payFee=function(money){
+                window.alert("应缴"+money*0.8);
+            }
+        }
+        function Puip(name,age){
+            this.name=name;
+            this.age=age;
+            this.show=window.alert(name +"--"+age);
+            this.payFee=function(money){
+                window.alert("应缴"+money*0.5);
+            }
+        }*/
+        //-->stu function()
+        function Stu(name,age){
+            this.name=name;
+            this.age=age;
+            this.show=function(){
+                window.alert(this.name +"--"+this.age);
+            } 
+        }
+        //-->Mid/Puip
+        function Mid(name,age){
+            this.stu=Stu;         //this.stu相当于这个类了
+            this.stu(name,age);   //js通过 对象冒充 实现继承
+
+        }
+        var h =new Mid("hjh",20);
+        h.show();
+        
+        //多态(js天生支持多态：因为变量类型在运行过程中引擎决定)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

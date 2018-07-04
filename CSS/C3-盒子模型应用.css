@@ -1,0 +1,61 @@
+/*网页一般这样：百度右侧/新闻网*/
+
+body{                          /*html选择器*/
+    border: 1px solid red;  /*指定了body的border，样式*/
+    width: 800px;
+    height: 1000px;
+    margin: 0 auto;           /*0表示上下边距为0，auto表示左右居中*/
+}
+.s1{                          /*类选择器*/
+    width: 150px;
+    height: 152px;
+    border: 1px solid blue;
+    margin-top: 10px;             /*距离上一个块*/
+    margin-left: 10px;
+}               
+.s1 img{                     /*父类中出现子类是自动套用*/
+    width: 150px;
+    height: 152px;
+}           
+/*盒子模型综合应用！！*/
+.boxs{                     /*图片区域位置*/
+    width: 500px;
+    height: 300px;
+    border: 1px solid #b4b4b4;
+    margin:auto;
+    margin-top: 20px;
+}
+.faceul{                   /*控制整个图片显示区宽度和高度*/
+    width: 350px;
+    height: 250px;
+    border: 1px solid red;
+    list-style-type:none;       /*设置列表标记项*/
+    padding: 0;
+    margin: auto;
+}
+.faceul li{                /*控制单个图片那区域*/
+    width: 50px;
+    height: 62px;
+    border: 1px solid blue;
+    float: left;           /*列表浮动：列表横排*/
+    margin-left: 5.5px;  
+    margin-top: 5px;      /*相对边上的*/
+
+}
+.faceul img{              /*也是faceul的子类*/
+    width: 40px;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+.faceul a{
+    font-size: 12px;
+    margin: 13px;
+}
+a:link{
+    text-decoration: none;
+    color: blue;
+}
+a:hover{                   /*鼠标悬停变色*/
+    text-decoration: underline;
+    color: red;
+}

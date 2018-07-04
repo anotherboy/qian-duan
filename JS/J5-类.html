@@ -1,0 +1,33 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>my page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script lang="javascript">
+        //把相同属性集中，创建新的数据类型
+        function Cat(){}     //猫类        Cat():---函数    var cat1=new Cat();---类 此时cat1就是一个对象实例
+        
+            var cat1=new Cat();
+            cat1.name="小白";
+            cat1.age=2;            //实例属性可以动态添加(也可以在类里面定义)
+            cat1.color="橘色";
+            window.alert(cat1.name + cat1.color);
+
+        //类中带属性---this!!!
+        function Person(){
+            this.name = "avc";        
+            this.age = 18;
+        }
+        var p1 = new Person();         //创建属性
+        var p2 = new Person();
+        window.alert(p1.name + "    " + p2.name );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <script lang="javascript">
+        //定义类的---第一种---方法
+        function Person(name, age){ 
+            this.name = name;              //用传入的参数初始化属性
+            this.age = age;
+            this.show = function(){        //如果你一定要访问私有属性，则需要定义一个公开的方法（特权方法）
+                document.write("名字 = " + this.name);    //哪个对象实例调用this所在函数，那么this就代表哪个对象  
+            }
+            this.js = function(n){         //调用内建函数可以传参数
+                var res = 0;
+                for(var i = 1; i<=n; i++){
+                    res += i;
+                }
+                return res;
+            }
+        }
+        var p1 = new Person("bob",90);
+        p1.show();
+        var p2 = new Person("gya",98);
+        p2.show();
+        document.write("<br/>res = " + p1.js(10));
+        //函数指针
+        function f(){
+            window.alert("hello." + this.name);
+        }
+        var p3 = new Person("jia_hong",18);          //这个对象的this.name="jia_hong"
+        p3.Name = f;              //函数指针是函数名，不是函数名()
+        p3.Name();
+        window.alert(p3.Name);
+        //定义类的---第二种---方法
+        var o = new Object;      //Object是所有类的基类
+        o.name = "hjh";
+        window.alert(o.constructor);     //查看构造函数
+        //给类添加方法
+        var i = new Number(11);         //Number是js自有类   对象i的this属性就是i
+        Number.prototype.add = function (a){       //给Number类添加一个add方法
+            return this+a;
+        }
+        window.alert(i.add(10));              //11+10
+
+        //使用内置类!!
+        document.write("<br/>");
+        var arr1=new Array(2);          //arr1是一个数组，有3个元素
+        arr1[0] = "hello";
+        arr1[1] = "jia";
+        arr1.push("hong");             //继承的方法push:在数组!末尾!增加一个位置
+        //arr1[2] = "hong";
+        document.write(arr1);
+        arr1.reverse();                //Array中已有方法reverse()
+        document.write(arr1); 
+        Array.prototype.find=function(n){          //向已有类中添加方法
+            for(var i = 0; i < this.length; i++){          //this就是对象!
+                if(this[i] == n){return i;}
+            }
+            return -1;
+        }
+        document.write("<br/>");
+        document.write("下标为:" + arr1.find("jia")) ;
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

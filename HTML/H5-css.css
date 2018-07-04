@@ -1,0 +1,16 @@
+.style1{                                /*类选择器*/    
+    width: 300px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 60px 0px 0px 60px;       /*上 左 下 右*/
+}
+
+.style1 table{                     /*父子选择器*/
+    border: 1px solid blue;
+    width: 298px;
+    height: 250px;
+}
+.style1 table td{
+    border: 0px solid black;
+    text-align: center            /*所有居中*/
+}

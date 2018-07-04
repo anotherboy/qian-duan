@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>my js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <script lang="javascript" src="J3-myfunctions.js"></script>         <!--引用js中的函数-->
+
+    <script lang="javascript" >
+        //自建函数
+        var num1 = window.prompt("input1:");
+        var num2 = window.prompt("input2:");
+        var operator = window.prompt("inputop:");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        document.write("res=" + JS(num1,num2,operator));
+        //系统函数
+        var str="window.alert('eval就这么厉害!')";
+        eval(str);
+        var str1="嘉鸿";
+        var str2=escape(str1);
+        window.alert(str2);
+        //函数调用
+        //test();
+        another = test;  //another相当于一个指针指向test()
+        another();
+        //递归调用过程!!
+        abc(5);     //递归过程  返回时碰到递归函数也执行(参数++/--之类)只是不再进入递归
+        //参数任意-arguments
+        
+        abc2(2,3,4,5);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

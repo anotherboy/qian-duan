@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="J9-js访问css.css" />
+<script type="text/javascript">
+function whichElement(e)
+{
+    alert("x="+e.clientX+"---"+"y="+e.clientY);
+}
+function test2(){
+    window.alert(new Date());
+}
+function test4(eventobj){
+    //window.alert(eventobj.value);
+    var div1 = document.getElementById("div1")    //获取div进行操作 访问内部style属性的css样式
+    if(eventobj.value=="黑色"){
+        div1.style.backgroundColor="black";          //在js里面：background-color-->backgroundColor
+    }
+    else if(eventobj.value=="红色"){
+        div1.style.backgroundColor="red";
+    }
+}
+function test5(eventobj){
+   
+    var ocssRules = document.styleSheets[0].rules||document.styleSheets[0].cssRules;   //获取css中所有的类选择器(不同浏览器不一样) 0--第一个css
+    var style1=ocssRules[0];                         //从ocssRules中取出希望改变的类
+    if(eventobj.value=="黑色"){
+        window.alert("黑色");
+        style1.style.backgroundColor="black";        //注意有一个style
+    }
+    else if(eventobj.value=="红色"){
+        style1.style.backgroundColor="red";
+    }
+}
+</script>
+</head>
+
+<body >     <!--event事件对象--><!--onmousedown="whichElement(event)"-->
+    <input type="button" onclick="test2()" value="当前时间" />
+    <!--内部样式-->
+    <div id="div1" style="width: 400px; height: 300px;background-color:burlywood">div1</div>
+    <input type="button" value="黑色" onclick="test4(this)" />       <!--this 元素本身 点击就会有一个event对象传进test4-->
+    <input type="button" value="红色" onclick="test4(this)" />      <!--this能让test4知道发生的什么事件-->
+    <!--外部css-->
+    <div id="div2" class="style1">div2</div>
+    <input type="button" value="黑色" onclick="test5(this)" />      
+    <input type="button" value="红色" onclick="test5(this)" />      
+</body>
+</html>

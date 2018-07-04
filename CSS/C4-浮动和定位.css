@@ -1,0 +1,64 @@
+/*浮动*/
+body{
+    width: 1400px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.div1{
+    width: 150px;
+    height: 100px;
+    border: 1px solid red;
+    background-color: pink;
+    margin-top: 10px;
+}
+#div2{
+    float: right;     /*右浮动：让该元素向右移动直到碰到他父元素/上一个元素边界*/
+}
+#div3{
+    float: left;      /*左浮动：让该元素向左移动直到碰到他父元素/上一个元素边界（卡住了：部分边界）*/
+}
+
+/*浮动相当于元素不占用位置的显示（实际占用）*/
+
+/*定位*/
+.position{
+    margin-top: 150px;
+    border: 2px solid red;
+    width: 1200px;
+    height: 400px;
+}
+.p1{
+    width: 100px;
+    height: 70px;
+    background-color: rgb(168, 162, 162);
+    float: left;
+    margin-left: 10px;
+}
+#special1{
+    position: relative;      /*相对定位*/
+    left: 40px;              /*相对原来位置向 右 移动*/  /*左边界坐标变大40px*/
+    top: 100px;              /*相对原来位置向 下 移动*/
+}
+
+.p2{
+    width: 100px;
+    height: 70px;
+    background-color: rgb(168, 162, 162);
+    float: right;
+    margin-right: 10px;
+}
+#special2{
+    position: absolute;       /*绝对定位*/   /*其他元素自动填充*/
+    right: 40px;              /*以最近非标准流盒子为参照!!!*/
+    top: 100px;
+}
+.p3{
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    float: right;
+    position: relative;
+    left: 50px;
+    top: 100px;               /*让对应div成为偏移原来位置成为非标准流*/
+}

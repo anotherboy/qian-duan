@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="C4-浮动.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="div1" id="div2">div1</div>
+    <div class="div1" id="div2">div2</div>
+    <div class="div1" id="div3">div3</div>
+    <div class="div1" id="div3">div4</div>
+    <div><img src="C:\Users\hjh\Desktop\HTML\images\dog2.jpg" width="150px" />nlmlmeohngla</div> <!--因为前面元素都浮动了，会显示最上端-->
+    <!--让图片浮动，这字又会显示到最上面-->
+    <img style="float: left;margin-left: 0px;" src="C:\Users\hjh\Desktop\HTML\images\dog2.jpg" width="150px" />goganlmlmeohngla
+    <div class="position">
+        <span style="font-style: italic">相对定位：<span style="float: right;">绝对定位：</span></span><br/><br/>
+        <div class="p1">内容1</div>
+        <div class="p1" id="special1">内容2</div>
+        <div class="p1">内容3</div>
+        <div class="p1">内容4</div>
+
+        <div class="p2">内容1</div>
+        <div class="p2" id="special2">内容2</div>
+
+        <div class="p2">内容4</div>
+
+        <!--绝对定位参照点-->
+        <div class="p3"><div class="p2" id="special2">内容3</div></div>   <!--距离内容3最近的非标准流就是外面那个div-->
+    </div>
+</body>
+</html>

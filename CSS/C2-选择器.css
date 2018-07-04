@@ -1,0 +1,40 @@
+/*类选择器*/
+.style1{
+    font-weight: bold;
+    font-size: 20px;
+    background-color: pink;
+}
+
+/* #style2是一个id选择器 */
+#style2{
+    font-size: 30px;
+    color: black;
+}
+/*父子选择器*/
+#style2 span{
+    font-style: italic;
+    color: red;
+}
+
+/* html的选择器 */
+body{ 
+    color: orange;  /*含有body这个html元素*/
+} 
+
+a:link{                      /*链接颜色*/
+    color: black;
+    text-decoration: none;
+}
+a:hover{                    /*悬停操作*/
+    text-decoration: underline;
+}
+a:visited{
+    color: red;
+}
+
+/*通配符选择器*/
+*{
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 0px;
+}

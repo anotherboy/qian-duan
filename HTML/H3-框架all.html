@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+    <frameset rows="19.5%,*" frameborder=10 bordercolor=red framespacing=100 >    <!--分行-->
+        <frame src="H3-框架top.html" noresize scrolling="no" />   <!--不让拖动/去掉滚动-->
+        <frameset cols="20%,*">                <!--分列-->
+            <frame src="H3-框架left.html" />
+            <frame src="H3-框架right1.html" name="right1" />  <!--frame取名方便替换--><!--像模块调用一样-->
+
+        </frameset>
+    </frameset>
+</html>
